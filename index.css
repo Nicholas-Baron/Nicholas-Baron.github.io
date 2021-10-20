@@ -81,3 +81,10 @@ ul, ol {
     width: 50%;
 }
 
+.work-xp {
+    box-shadow: 5px 5px 5px 5px grey;
+    border-radius: 5px;
+    width: 75%;
+    margin: auto;
+}
+
