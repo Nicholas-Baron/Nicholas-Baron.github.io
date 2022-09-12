@@ -79,6 +79,7 @@ ul, ol {
     background-color: #b2d5e9;
     text-align: center;
     width: 50%;
+    overflow: auto;
 }
 
 .info-card {
