@@ -1,6 +1,5 @@
 body {
     font-family: "Lato", "Noto Sans", sans-serif;
-    --card-width: 1000px;
     background-color: #ccc;
 }
 
@@ -9,38 +8,39 @@ ul, ol {
     text-align: left;
 }
 
-#card {
-    /* Center the card on the page */
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    /* Flex into horizontal*/
-    display: flex;
-    flex-flow: row nowrap;
-
-    /* Shadow all around */
-    box-shadow: 0 0 15px 5px #888;
-
-    /* Fix card size to 50% of width and height to 50% of width */
-    width: var(--card-width);
-    height: calc(var(--card-width) * 0.5);
+li {
+    margin: 0.25em;
 }
 
-/* Left half of the card */
-#left-half {
-    background-color: white;
-    position: relative;
+body {
+    max-width: max(65%, 600px);
+    margin: auto;
+}
+
+#info {
+    max-height: 25em;
+}
+
+#info h1 {
     text-align: center;
-    width: 50%;
 }
 
 #portrait {
     border-radius: 1em;
-    width: 50%;
-    margin-top: 3em;
+    max-width: 100%;
+    object-fit: contain;
+    max-height: 350px;
+    margin: auto;
+    display: block;
 }
+
+@media (width >= 480px) {
+    #portrait {
+        max-width: 30%;
+        float: right;
+    }
+}
+
 
 #name {
     display: block;
@@ -55,36 +55,28 @@ ul, ol {
 }
 
 #links {
-    text-align: left;
-
-    margin-left: 0.5em;
-    padding-bottom: 0.5em;
-
-    position: absolute;
-    bottom: 0;
+    display: flex;
 }
 
 #links a {
-    margin-left: 0.5em;
     text-decoration: none;
-    color: inherit;
+    margin-left: 1em;
+    margin-right: 1em;
 }
 
-.fa_custom:hover {
+.icon {
+    height: 1em;
+}
+
+.icon:hover {
     color: blue;
 }
 
-/* Right half of the card */
-#right-half {
-    background-color: #b2d5e9;
-    text-align: center;
-    width: 50%;
-    overflow: auto;
+table {
+    border-spacing: 0 0.5em;
 }
 
-.info-card {
-    box-shadow: 5px 5px 5px 5px grey;
-    border-radius: 5px;
-    width: 75%;
-    margin: auto;
+td {
+    padding-left: 5px;
+    padding-right: 5px;
 }
