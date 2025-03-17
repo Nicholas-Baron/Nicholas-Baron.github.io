@@ -1,20 +1,31 @@
 body {
     font-family: "Lato", "Noto Sans", sans-serif;
     background-color: #ccc;
+    max-width: max(60%, 600px);
+    margin: auto;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+body > section,
+body > header {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    margin-top: 3em;
 }
 
 ul, ol {
-    list-style: none;
-    text-align: left;
+    list-style-position: inside;
+    padding: 0;
 }
 
 li {
-    margin: 0.25em;
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
 }
 
-body {
-    max-width: max(65%, 600px);
-    margin: auto;
+header {
+    margin-top: 5em;
 }
 
 #info {
@@ -32,6 +43,7 @@ body {
     max-height: 350px;
     margin: auto;
     display: block;
+    margin-left: 1em;
 }
 
 @media (width >= 480px) {
@@ -42,20 +54,12 @@ body {
 }
 
 
-#name {
-    display: block;
-    font-size: 2em;
-}
-
-#contact-list {
-    margin-left: 2em;
-    margin-block-start: 0.5em;
-    margin-block-end: 0.5em;
-    padding-inline-start: 20px;
-}
-
 #links {
     display: flex;
+}
+
+#resume {
+    margin-left: 0 !important;
 }
 
 #links a {
