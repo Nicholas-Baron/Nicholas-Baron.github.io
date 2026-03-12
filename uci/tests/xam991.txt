@@ -1,0 +1,29 @@
+main
+var x, y, z;
+
+function adder(a, b);
+{
+    return b + a;
+};
+
+{
+    let x <- call InputNum;
+    let y <- x;
+    let z <- 0;
+
+    if x < 10 then
+        let y <- 5;
+        let z <- x;
+        let x <- x + 1;
+    else
+        while z < 10 do
+            let y <- call adder(x, z);
+            let y <- call adder(y, y);
+            if z < 5 then
+                let z <- y;
+            fi;
+            let z <- z * 2;
+        od;
+        let x <- x + 1;
+    fi;
+}.
